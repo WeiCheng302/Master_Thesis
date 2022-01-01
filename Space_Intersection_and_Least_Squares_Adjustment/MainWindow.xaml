@@ -1,0 +1,46 @@
+﻿<Window x:Name="Window" x:Class="Space_Intersection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Space_Intersection"
+        mc:Ignorable="d"
+        Title="Space Intersection" Height="800" Width="1200">
+    <Grid>
+        <Button x:Name="Load_Image" Content="Load Image" HorizontalAlignment="Left" Margin="61,69,0,0" VerticalAlignment="Top" Width="164" Height="37" FontSize="18" Click="Load_Image_Click"/>
+        <TextBox x:Name="Image_name" HorizontalAlignment="Left" Height="20" Margin="244,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" BorderThickness="0,0,0,0" FontSize="10"/>
+        <Button x:Name="LoadAll" Content="Load All Image" HorizontalAlignment="Left" Height="38" Margin="61,121,0,0" VerticalAlignment="Top" FontSize="18" Width="164" Click="LoadAll_Click"/>
+        <TextBox x:Name="Dirname" HorizontalAlignment="Left" Height="19" Margin="244,140,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Width="508" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="Debug" HorizontalAlignment="Left" Height="59" Margin="977,366,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"/>
+        <Button x:Name="Undistorted_Img" Content="Distortion" HorizontalAlignment="Left" Height="37" Margin="61,217,0,0" VerticalAlignment="Top" Width="164" FontSize="18" Click="Undistorted_Img_Click"/>
+        <Image x:Name="Debug_Image" HorizontalAlignment="Left" Height="219" Margin="600,38,0,0" VerticalAlignment="Top" Width="295"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="37" Margin="1084,288,0,0" VerticalAlignment="Top" Width="55" Click="button_Click"/>
+        <Button x:Name="Load_KF_Info" Content="Load KF Info" HorizontalAlignment="Left" Height="38" Margin="668,83,0,0" VerticalAlignment="Top" Width="164" FontSize="18" Click="Load_KF_Info_Click" IsEnabled="False"/>
+        <TextBox x:Name="File_XYZ_name" HorizontalAlignment="Left" Height="20" Margin="244,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="486" BorderThickness="0,0,0,0" FontSize="10"/>
+        <Button x:Name="Load_Control_Point" Content="Load Control Point" HorizontalAlignment="Left" Height="36" Margin="61,270,0,0" VerticalAlignment="Top" Width="164" IsDefault="True" FontSize="18" Click="Load_Control_Point_Click"/>
+        <Button x:Name="Foreard_Intersection" Content="Triangulation" HorizontalAlignment="Left" Height="38" Margin="668,140,0,0" VerticalAlignment="Top" Width="164" FontSize="18" Click="Foreard_Intersection_Click" IsEnabled="False"/>
+        <TextBox x:Name="File_CP_name" HorizontalAlignment="Left" Height="20" Margin="244,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" BorderThickness="0,0,0,0" FontSize="10"/>
+        <Button x:Name="Load_TUM_Traj" Content="Load TUM Trajectory" HorizontalAlignment="Left" Height="37" Margin="61,366,0,0" VerticalAlignment="Top" Width="164" FontSize="18" Click="Load_TUM_Traj_Click"/>
+        <Button x:Name="Collinearity" Content="Intersection" HorizontalAlignment="Left" Height="38" Margin="61,418,0,0" VerticalAlignment="Top" Width="164" FontSize="18" Click="Collinearity_Click"/>
+        <TextBox x:Name="LoadTtext" HorizontalAlignment="Left" Height="22" Margin="55,38,0,0" Text="Load Single Image or All the Image in the same folder." TextWrapping="Wrap" VerticalAlignment="Top" Width="430" FontSize="16" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="SetText" HorizontalAlignment="Left" Height="22" Margin="55,190,0,0" Text="Load and set the required information." TextWrapping="Wrap" VerticalAlignment="Top" Width="351" FontSize="16" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="FwIntersectCV" HorizontalAlignment="Left" Height="18" Margin="648,42,0,0" Text="Forward Intersection CV." TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="16" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="FwIntersectPho" HorizontalAlignment="Left" Height="18" Margin="55,336,0,0" Text="Forward Intersection Photogrammetry." TextWrapping="Wrap" VerticalAlignment="Top" Width="298" FontSize="16" BorderThickness="0,0,0,0"/>
+        <Button x:Name="ConformalTransformation" Content="3D Conformal Transformation" HorizontalAlignment="Left" Height="34" Margin="893,116,0,0" VerticalAlignment="Top" Width="247" FontSize="16" Click="ConformalTransformation_Click"/>
+        <Button x:Name="S_P_T" Content="7 parameter transform" HorizontalAlignment="Left" Height="40" Margin="893,53,0,0" VerticalAlignment="Top" Width="246" Click="S_P_T_Click"/>
+        <Button x:Name="Map_Transformation" Content="Map Transformation" HorizontalAlignment="Left" Margin="61,579,0,0" VerticalAlignment="Top" Height="38" Width="164" Click="Map_Transformation_Click" FontSize="16"/>
+        <TextBox x:Name="File_Map_name" TextWrapping="Wrap" Margin="834,249,48,520"/>
+        <Button x:Name="MT_Adjustment" Content="MT Adjustment" HorizontalAlignment="Left" Height="38" Margin="61,516,0,0" VerticalAlignment="Top" Width="164" Click="MT_Adjustment_Click" FontSize="16"/>
+        <Button x:Name="Load_Trajectory_1" Content="Load SfM Trajectory " HorizontalAlignment="Left" Height="38" Margin="365,516,0,0" VerticalAlignment="Top" Width="167" FontSize="16" Click="Load_Trajectory_1_Click"/>
+        <Button x:Name="Load_Trajectory_2" Content="Load SLAM Trajectory " HorizontalAlignment="Left" Height="37" Margin="365,580,0,0" VerticalAlignment="Top" Width="167" FontSize="16" Click="Load_Trajectory_2_Click"/>
+        <Button x:Name="Trajectory_Compare" Content="Compare Trajectory" HorizontalAlignment="Left" Height="38" Margin="365,641,0,0" VerticalAlignment="Top" Width="167" FontSize="16" Click="Trajectory_Compare_Click"/>
+        <Button x:Name="Batch_Compare" Content="Batch Compare Traj" HorizontalAlignment="Left" Height="38" Margin="585,641,0,0" VerticalAlignment="Top" Width="167" FontSize="16" Click="Batch_Compare_Click"/>
+        <Button x:Name="Inv_SPT" Content="Inverse SPT" HorizontalAlignment="Left" Height="38" Margin="966,165,0,0" VerticalAlignment="Top" Width="173" FontSize="16" Click="Inv_SPT_Click"/>
+        <Button x:Name="Batch_Transform_CP" Content="Batch Transform CP" HorizontalAlignment="Left" Height="37" Margin="61,642,0,0" VerticalAlignment="Top" Width="164" FontSize="16" Click="Batch_Transform_CP_Click"/>
+        <TextBox x:Name="FwIntersectPho_Copy" HorizontalAlignment="Left" Height="18" Margin="55,485,0,0" Text="Mixed Type Adjustment (CP)" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" FontSize="16" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="FwIntersectPho_Copy1" HorizontalAlignment="Left" Height="18" Margin="350,487,0,0" Text="Mixed Type Adjustment (Traj)" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" FontSize="16" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="Localization_Analysis" HorizontalAlignment="Left" Height="18" Margin="814,487,0,0" Text="Localization Analysis" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" FontSize="16" BorderThickness="0,0,0,0"/>
+        <Button x:Name="Localization_Compare" Content="Localization Compare" HorizontalAlignment="Left" Height="37" Margin="826,516,0,0" VerticalAlignment="Top" Width="177" FontSize="16" IsEnabled="False"/>
+
+    </Grid>
+</Window>
